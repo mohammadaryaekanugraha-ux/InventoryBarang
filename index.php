@@ -39,7 +39,7 @@
     <div class="d-flex align-items-center justify-content-between">
       <a href="index.php" class="logo d-flex align-items-center">
         <img src="assets/img/logo.png" alt="">
-        <span class="d-none d-lg-block">NiceAdmin</span>
+        <span class="d-none d-lg-block">namasistem</span>
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
         </div><!-- End Logo -->
@@ -126,14 +126,12 @@
         </a>
       </li><!-- End Dashboard Nav -->
 
-
         <li class="nav-item">
         <a class="nav-link " href="produk.php">
           <i class="bi bi-box"></i>
           <span>Data Produk</span>
         </a>
       </li><!-- End Dashboard Nav -->
-
 
         <li class="nav-item">
         <a class="nav-link " href="laporan.php">
@@ -436,7 +434,6 @@
 
             <!-- Top Selling -->
            
-
           </div>
         </div><!-- End Left side columns -->
 
@@ -518,13 +515,10 @@
 
           <!-- Budget Report -->
          
-
           <!-- Website Traffic -->
          
-
           <!-- News & Updates Traffic -->
           
-
         </div><!-- End Right side columns -->
 
       </div>
