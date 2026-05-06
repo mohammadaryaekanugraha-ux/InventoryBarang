@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Kategori Produk - Nama Sistem</title>
+    <title>Kategori Produk - Inventory_Barang(25550021)</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -37,7 +37,11 @@
     <header id="header" class="header fixed-top d-flex align-items-center">
 
         <div class="d-flex align-items-center justify-content-between">
+<<<<<<< HEAD
         <a href="index.php" class="logo d-flex align-items-center">
+=======
+        <a href="indeks.php" class="logo d-flex align-items-center">
+>>>>>>> 59dc92c (Update fitur atau perbaikan kode Inventory)
             <img src="assets/img/logo.png" alt="">
             <span class="d-none d-lg-block">namasistem</span>
         </a>
@@ -157,68 +161,41 @@
         <nav>
             <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-            <li class="breadcrumb-item active">Kaegori Produk</li>
+            <li class="breadcrumb-item active">Kategori Produk</li>
             
             </ol>
         </nav>
         </div><!-- End Page Title -->
+        <div class="row">
+            <div class="col-lg-12">
+
+              <div class="card">
+                <div class="card-body mt-3">
+                <a href="t_kat.php" class="btn btn-primary">Tambah Data</a>
+            </div>
+              </div>
+            </div>
+        </div>
 
         <section class="section">
         <div class="row">
             <div class="col-lg-12">
 
             <div class="card">
-                <div class="card-body">
-                <h5 class="card-title">Datatables</h5>
-                <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable</p>
-
+                <div class="card-body mt-3">
+                
                 <!-- Table with stripped rows -->
                 <table class="table datatable">
                     <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Position</th>
-                        <th scope="col">Age</th>
-                        <th scope="col">Start Date</th>
-                    </tr>
+                      <tr>
+                        <th scope="col">No</th>
+                        <th scope="col">Kode kategori</th>
+                        <th scope="col">Kategori produk</th>
+                        <th scope="col">Aksi</th>
+                      </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Brandon Jacob</td>
-                        <td>Designer</td>
-                        <td>28</td>
-                        <td>2016-05-25</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Bridie Kessler</td>
-                        <td>Developer</td>
-                        <td>35</td>
-                        <td>2014-12-05</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Ashleigh Langosh</td>
-                        <td>Finance</td>
-                        <td>45</td>
-                        <td>2011-08-12</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">4</th>
-                        <td>Angus Grady</td>
-                        <td>HR</td>
-                        <td>34</td>
-                        <td>2012-06-11</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">5</th>
-                        <td>Raheem Lehner</td>
-                        <td>Dynamic Division Officer</td>
-                        <td>47</td>
-                        <td>2011-04-19</td>
-                    </tr>
+                    
                     </tbody>
                 </table>
                 <!-- End Table with stripped rows -->

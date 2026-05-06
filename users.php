@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Produk - Inventory_Barang(25550021)</title>
+    <title>User - Inventory_Barang(25550021)</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -28,7 +28,10 @@
 
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
+<<<<<<< HEAD
 
+=======
+>>>>>>> 59dc92c (Update fitur atau perbaikan kode Inventory)
     </head>
 
     <body>
@@ -47,12 +50,19 @@
     
         <nav class="header-nav ms-auto">
         <ul class="d-flex align-items-center">
+<<<<<<< HEAD
+=======
+
+>>>>>>> 59dc92c (Update fitur atau perbaikan kode Inventory)
             <li class="nav-item dropdown pe-3">
 
             <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
                 <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+<<<<<<< HEAD
             </a><!-- End Profile Iamge Icon -->
 
+=======
+>>>>>>> 59dc92c (Update fitur atau perbaikan kode Inventory)
             <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                 <li class="dropdown-header">
                 <h6>Kevin Anderson</h6>
@@ -63,7 +73,7 @@
                 </li>
 
                 <li>
-                <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                <a class="dropdown-item d-flex align-items-center" href="users-profile.php">
                     <i class="bi bi-person"></i>
                     <span>My Profile</span>
                 </a>

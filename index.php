@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Dashboard - Nama Sistem</title>
+  <title>Dashboard - Inventory_Barang(25550021)</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 

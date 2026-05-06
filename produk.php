@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Produk - Nama Sistem</title>
+    <title>Produk - Inventory_Barang_25550021</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -47,6 +47,9 @@
     
         <nav class="header-nav ms-auto">
         <ul class="d-flex align-items-center">
+<<<<<<< HEAD
+=======
+
             <li class="nav-item dropdown pe-3">
 
             <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
