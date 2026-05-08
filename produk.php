@@ -47,8 +47,6 @@
     
         <nav class="header-nav ms-auto">
         <ul class="d-flex align-items-center">
-<<<<<<< HEAD
-=======
 
             <li class="nav-item dropdown pe-3">
 
@@ -155,7 +153,6 @@
 
     </aside><!-- End Sidebar-->
 
-
     <main id="main" class="main">
 
         <div class="pagetitle">
@@ -167,7 +164,21 @@
             
             </ol>
         </nav>
-        </div><!-- End Page Title -->
+        </div>
+        
+        <div class="row">
+    <div class="col-lg-12">
+
+        <div class="card">
+            <div class="card-body mt-3">
+                <a href="t_produk.php" class="btn btn-primary">Tambah Data</a>
+                <a href="stok.php" class="btn btn-dark">Stok</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+        <!-- End Page Title -->
 
         <section class="section">
         <div class="row">
@@ -182,50 +193,48 @@
                 <table class="table datatable">
                     <thead>
                     <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Position</th>
-                        <th scope="col">Age</th>
-                        <th scope="col">Start Date</th>
+                        <th scope="col">No</th>
+                        <th scope="col">Kode Produk</th>
+                        <th scope="col">Nama Produk</th>
+                        <th scope="col">Kategori</th>
+                        <th scope="col">Stok</th>
+                        <th scope="col">Harga</th>
+                        <th scope="col">Gambar</th>
+                        <th scope="col">Aksi</th>
                     </tr>
                     </thead>
                     <tbody>
+                    <?php
+                    include "koneksi.php";
+                    $no = 1;
+
+                    // ambil data produk + nama kategori
+                    $sql = mysqli_query($conn, "
+                    SELECT p.*, c.category_name
+                    FROM products p
+                    LEFT JOIN categories c ON p.category_id = c.id
+                  ");
+
+                    while ($data = mysqli_fetch_array($sql)) {
+                    ?>
                     <tr>
-                        <th scope="row">1</th>
-                        <td>Brandon Jacob</td>
-                        <td>Designer</td>
-                        <td>28</td>
-                        <td>2016-05-25</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Bridie Kessler</td>
-                        <td>Developer</td>
-                        <td>35</td>
-                        <td>2014-12-05</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Ashleigh Langosh</td>
-                        <td>Finance</td>
-                        <td>45</td>
-                        <td>2011-08-12</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">4</th>
-                        <td>Angus Grady</td>
-                        <td>HR</td>
-                        <td>34</td>
-                        <td>2012-06-11</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">5</th>
-                        <td>Raheem Lehner</td>
-                        <td>Dynamic Division Officer</td>
-                        <td>47</td>
-                        <td>2011-04-19</td>
-                    </tr>
-                    </tbody>
+                    <td><?php echo $no++; ?></td>
+                    <td><?php echo $data['product_code']; ?></td>
+                    <td><?php echo $data['product_name']; ?></td>
+                    <td><?php echo $data['category_name']; ?></td>
+                    <td><?php echo $data['stock']; ?></td>
+                    <td>Rp <?php echo number_format($data['price'], 0, ',', '.'); ?></td>
+                    <td>
+                    <img src="produk_img/<?php echo $data['gambar']; ?>" width="60">
+                    </td>
+                    <td>
+                       <a href="e_produk.php?id=<?php echo $data['id']; ?>" class="btn btn-warning">Edit</a>
+                       <a href="h_produk.php?id=<?php echo $data['id']; ?>" class="btn btn-danger" 
+                        onclick="return confirm('Apakah Anda Yakin Ingin Menghapus Data?')">Hapus</a>
+                </td>
+              </tr>
+            <?php } ?>
+         </tbody>
                 </table>
                 <!-- End Table with stripped rows -->
 

@@ -1,3 +1,24 @@
+   <?php
+include "koneksi.php";
+$id = $_GET['id'];
+$sql = mysqli_query($conn, "SELECT * FROM categories WHERE id = '$id'");
+$hasil = mysqli_fetch_array($sql);
+if (isset($_POST['update'])) {
+
+    $nm_kat = $_POST['nm_kat'];
+
+    $query = mysqli_query($conn, "UPDATE categories SET category_name = '$nm_kat' WHERE id='$id'");
+    if ($query) {
+        echo "<script>alert('Data berhasil diubah!')</script>";
+        header("refresh:0, kategori_produk.php");
+    } else {
+        echo "<script>alert('Data gagal diubah!')</script>";
+        header("refresh:0, kategori_produk.php");
+    }
+}
+?> 
+    
+    
     <!DOCTYPE html>
     <html lang="en">
 
@@ -37,11 +58,7 @@
     <header id="header" class="header fixed-top d-flex align-items-center">
 
         <div class="d-flex align-items-center justify-content-between">
-<<<<<<< HEAD
         <a href="index.php" class="logo d-flex align-items-center">
-=======
-        <a href="indeks.php" class="logo d-flex align-items-center">
->>>>>>> 59dc92c (Update fitur atau perbaikan kode Inventory)
             <img src="assets/img/logo.png" alt="">
             <span class="d-none d-lg-block">namasistem</span>
         </a>
@@ -195,8 +212,26 @@
                       </tr>
                     </thead>
                     <tbody>
+                  <?php
+                  include "koneksi.php";
+                  $no = 1;
+                  $sql = mysqli_query($conn, "SELECT * FROM categories");
+                  while ($data = mysqli_fetch_array($sql)) {
+                  ?>
+                    <tr>
+                      <td><?php echo $no++; ?></td>
+                      <td><?php echo $data['kd_kat']; ?></td>
+                      <td><?php echo $data['category_name']; ?></td>
+                      <td>
+                        <a href="e_kat.php?id=<?php echo $data['id']; ?>" class="btn btn-warning">Edit</a>
+                        <a href="h_kat.php?id=<?php echo $data['id']; ?>" class="btn btn-danger" onclick="return confirm('Apakah Anda Yakin Ingin Menghapus Data?')">Hapus</a>
+                      </td>
+                    </tr>
+                  <?php } ?>
+                </tbody>
+                        
                     
-                    </tbody>
+                    
                 </table>
                 <!-- End Table with stripped rows -->
 
