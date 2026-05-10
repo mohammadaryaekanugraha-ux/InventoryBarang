@@ -186,7 +186,7 @@ if (isset($_POST['update'])) {
 
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Vertical Form</h5>
+                            <h5 class="card-title">Kategori produk</h5>
 
                             <!-- Vertical Form -->
                             <form class="row g-3" method ="post">
@@ -197,14 +197,6 @@ if (isset($_POST['update'])) {
                                 <div class="col-12">
                                     <label for="nm_kat" class="form-label">Nama kategori</label>
                                     <input type="text" class="form-control" id="nm_kat" name="nm_kat" value="<?php echo $hasil['category_name']; ?>"required>
-                                </div>
-                                <div class="col-12">
-                                    <label for="inputPassword4" class="form-label">Password</label>
-                                    <input type="password" class="form-control" id="inputPassword4">
-                                </div>
-                                <div class="col-12">
-                                    <label for="inputAddress" class="form-label">Address</label>
-                                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
                                 </div>
                                 <div class="text-center">
                                     <button type="button" class="btn btn-warning"><a href="kategori_produk.php" style="color: black; text-decoration:none;">kembali</a></button>
