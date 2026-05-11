@@ -224,7 +224,7 @@ if (isset($_POST['simpan'])) {
                             <h5 class="card-title">Tambah Produk</h5>
 
                             <!-- Vertical Form -->
-                            <form class="row g-3"> method="post" enctype="multipart/form-data">
+                            <form class="row g-3" action="t_produk.php" method="post" enctype="multipart/form-data">
                                 <div class="col-12">
                                     <label for="kd_produk" class="form-label">Kode Produk</label>
                                     <input type="text" class="form-control" id="kd_produk" name="kd_produk" value="<?php echo $kd_produk; ?>" readonly>

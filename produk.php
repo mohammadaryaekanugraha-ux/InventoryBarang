@@ -217,7 +217,7 @@
                     ?>
                     <tr>
                     <td><?php echo $no++; ?></td>
-                    <td><?php echo $data['product_code']; ?></td>
+                    <td><?php echo $data['PRODUCT_CODE']; ?></td>
                     <td><?php echo $data['product_name']; ?></td>
                     <td><?php echo $data['category_name']; ?></td>
                     <td><?php echo $data['stock']; ?></td>
