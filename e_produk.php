@@ -234,10 +234,10 @@ if (isset($_POST['update'])) {
                             <h5 class="Edit Produk">Tambah Produk</h5>
 
                             <!-- Vertical Form -->
-                            <form class="row g-3"> method="post" enctype="multipart/form-data">
+                            <form class="row g-3" method="post" enctype="multipart/form-data">
                                 <div class="col-12">
                                     <label for="kd_produk" class="form-label">kode produk</label>
-                                    <input type="text" class="form-control" id="kd_produk" name="kd_produk" value="<?php echo $hasil['product_code']; ?>" readonly>
+                                    <input type="text" class="form-control" id="kd_produk" name="kd_produk" value="<?php echo $hasil['PRODUCT_CODE']; ?>" readonly>
                                 </div>
                                
                                 <div class="col-12">
@@ -252,7 +252,7 @@ if (isset($_POST['update'])) {
                                 
                                 <div class="col-12">
                                     <label for="min_stok" class="form-label">Minimal stok</label>
-                                    <input type="number" class="form-control" id="min_stok" name="min-stok" value="<?php echo $hasil['min_stok']; ?>" required>
+                                    <input type="number" class="form-control" id="min_stok" name="min-stok" value="<?php echo $hasil['min_stock']; ?>" required>
                                 </div>
                                 
                                 <div class="col-12">
