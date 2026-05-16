@@ -1,3 +1,45 @@
+<?php
+session_start();
+include "koneksi.php";
+
+if (isset($_POST['login'])) {
+
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $password = $_POST['password'];
+
+    // cek user
+    $query = mysqli_query($conn, "SELECT * FROM users WHERE email='$email' LIMIT 1");
+    $user = mysqli_fetch_assoc($query);
+
+    if ($user) {
+
+        // cek password (hash)
+        if (password_verify($password, $user['password'])) {
+
+            // cek aktif
+            if ($user['is_active'] == 1) {
+
+                // simpan session
+                $_SESSION['login'] = True;
+                $_SESSION['user_id'] = $user['id'];
+                $_SESSION['name'] = $user['name'];
+                $_SESSION['role'] = $user['role'];
+
+                // redirect
+                header("Location: index.php");
+                exit;
+            } else {
+                echo "<script>alert('Akun tidak aktif');</script>";
+            }
+        } else {
+            echo "<script>alert('Password salah');</script>";
+        }
+    } else {
+        echo "<script>alert('Email tidak ditemukan');</script>";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +47,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Login - Inventory_Barang(25550021)</title>
+  <title>Login - Inventory_Barang_25550021</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -39,7 +81,7 @@
     <div class="d-flex align-items-center justify-content-between">
       <a href="index.php" class="logo d-flex align-items-center">
         <img src="assets/img/logo.png" alt="">
-        <span class="d-none d-lg-block">namasistem</span>
+        <span class="d-none d-lg-block">Inventory_Barang_25550021</span>
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
     </div><!-- End Logo -->
@@ -512,29 +554,25 @@
     </div><!-- End Page Title -->
 
     <section class="section">
-      <div class="row">
-        <div class="col-lg-6">
+      <form class="row g-3 needs-validation" method="POST" novalidate>
 
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Example Card</h5>
-              <p>This is an examle page with no contrnt. You can use it as a starter for your custom pages.</p>
-            </div>
-          </div>
+    <div class="col-12">
+        <label class="form-label">Email</label>
+        <input type="email" name="email" class="form-control" required>
+        <div class="invalid-feedback">Please enter your email.</div>
+    </div>
 
-        </div>
+    <div class="col-12">
+        <label class="form-label">Password</label>
+        <input type="password" name="password" class="form-control" required>
+        <div class="invalid-feedback">Please enter your password!</div>
+    </div>
 
-        <div class="col-lg-6">
+    <div class="col-12">
+        <button class="btn btn-primary w-100" type="submit" name="login">Login</button>
+    </div>
 
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Example Card</h5>
-              <p>This is an examle page with no contrnt. You can use it as a starter for your custom pages.</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
+</form>
     </section>
 
   </main><!-- End #main -->
@@ -542,14 +580,10 @@
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
     <div class="copyright">
-      &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
+      &copy; Copyright <strong><span>Inventory_Barang_25550021</span></strong>. All Rights Reserved
     </div>
     <div class="credits">
-      <!-- All the links in the footer should remain intact. -->
-      <!-- You can delete the links only if you purchased the pro version. -->
-      <!-- Licensing information: https://bootstrapmade.com/license/ -->
-      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
-      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      Designed by <a href="https://instagram.com/aragsbshs/" target="_blank">M. Arya Eka Nugraha</a>
     </div>
   </footer><!-- End Footer -->
 

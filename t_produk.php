@@ -1,5 +1,12 @@
 <?php
+session_start();
 include "koneksi.php";
+
+// Cek apakah user sudah login
+if (!isset($_SESSION["login"])) {
+    header("Location: login.php");
+    exit;
+}
 
 $auto = mysqli_query($conn, "select max(product_code) as max_code from products");
 $hasil = mysqli_fetch_array($auto);
@@ -108,17 +115,17 @@ if (isset($_POST['simpan'])) {
 
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                         <li class="dropdown-header">
-                            <h6>Kevin Anderson</h6>
-                            <span>Web Designer</span>
+                            <h6><?php echo isset($_SESSION['name']) ? $_SESSION['name'] : 'User'; ?></h6>
+                            <span><?php echo isset($_SESSION['role']) ? $_SESSION['role'] : 'Role'; ?></span>
                         </li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
 
                         <li>
-                            <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-                                <i class="bi bi-person"></i>
-                                <span>My Profile</span>
+                            <a class="dropdown-item d-flex align-items-center" href="logout.php">
+                                <i class="bi bi-box-arrow-right"></i>
+                                <span>Sign Out</span>
                             </a>
                         </li>
                         <li>
@@ -281,7 +288,7 @@ if (isset($_POST['simpan'])) {
             &copy; Copyright <strong><span>Inventory_Barang_25550021</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
-            Designed by <a href="">Nama Kalian</a>
+            Designed by <a href="https://instagram.com/aragsbshs/" target="_blank">M. Arya Eka Nugraha</a>
         </div>
     </footer><!-- End Footer -->
 

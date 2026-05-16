@@ -1,3 +1,14 @@
+<?php
+session_start();
+include "koneksi.php";
+
+// Cek apakah user sudah login
+if (!isset($_SESSION["login"])) {
+    header("Location: login.php");
+    exit;
+}
+?>
+
     <!DOCTYPE html>
     <html lang="en">
 
@@ -39,7 +50,7 @@
         <div class="d-flex align-items-center justify-content-between">
         <a href="index.php" class="logo d-flex align-items-center">
             <img src="assets/img/logo.png" alt="">
-            <span class="d-none d-lg-block">namasistem</span>
+            <span class="d-none d-lg-block">Inventory_Barang_25550021</span>
         </a>
         <i class="bi bi-list toggle-sidebar-btn"></i>
         </div><!-- End Logo -->
@@ -56,17 +67,17 @@
 
             <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                 <li class="dropdown-header">
-                <h6>Kevin Anderson</h6>
-                <span>Web Designer</span>
+                <h6><?php echo isset($_SESSION['name']) ? $_SESSION['name'] : 'User'; ?></h6>
+                <span><?php echo isset($_SESSION['role']) ? $_SESSION['role'] : 'Role'; ?></span>
                 </li>
                 <li>
                 <hr class="dropdown-divider">
                 </li>
 
                 <li>
-                <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-                    <i class="bi bi-person"></i>
-                    <span>My Profile</span>
+                <a class="dropdown-item d-flex align-items-center" href="logout.php">
+                    <i class="bi bi-box-arrow-right"></i>
+                    <span>Sign Out</span>
                 </a>
                 </li>
                 <li>
@@ -91,13 +102,6 @@
                 </li>
                 <li>
                 <hr class="dropdown-divider">
-                </li>
-
-                <li>
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                    <i class="bi bi-box-arrow-right"></i>
-                    <span>Sign Out</span>
-                </a>
                 </li>
 
             </ul><!-- End Profile Dropdown Items -->
@@ -248,14 +252,10 @@
     <!-- ======= Footer ======= -->
     <footer id="footer" class="footer">
         <div class="copyright">
-        &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>Inventory_Barang_25550021</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        Designed by <a href="https://instagram.com/aragsbshs/" target="_blank">M. Arya Eka Nugraha</a>
         </div>
     </footer><!-- End Footer -->
 
