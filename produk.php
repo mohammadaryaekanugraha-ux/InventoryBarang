@@ -48,11 +48,11 @@ if (!isset($_SESSION["login"])) {
     <header id="header" class="header fixed-top d-flex align-items-center">
 
         <div class="d-flex align-items-center justify-content-between">
-        <a href="index.php" class="logo d-flex align-items-center">
+        <a href="index.php" class="logo d-flex align-items-center me-auto me-lg-0" style="max-width: none; width: auto;">
             <img src="assets/img/logo.png" alt="">
-            <span class="d-none d-lg-block">Inventory_Barang_25550021</span>
+            <span class="d-none d-lg-block" style="font-size: 24px; padding-left: 8px;">Inventory_Barang_25550021</span>
         </a>
-        <i class="bi bi-list toggle-sidebar-btn"></i>
+        <i class="bi bi-list toggle-sidebar-btn" style="margin-left: 20px;"></i>
         </div><!-- End Logo -->
 
     
@@ -75,16 +75,6 @@ if (!isset($_SESSION["login"])) {
                 </li>
 
                 <li>
-                <a class="dropdown-item d-flex align-items-center" href="logout.php">
-                    <i class="bi bi-box-arrow-right"></i>
-                    <span>Sign Out</span>
-                </a>
-                </li>
-                <li>
-                <hr class="dropdown-divider">
-                </li>
-
-                <li>
                 <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
                     <i class="bi bi-gear"></i>
                     <span>Account Settings</span>
@@ -98,6 +88,16 @@ if (!isset($_SESSION["login"])) {
                 <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
                     <i class="bi bi-question-circle"></i>
                     <span>Need Help?</span>
+                </a>
+                </li>
+                <li>
+                <hr class="dropdown-divider">
+                </li>
+
+                <li>
+                <a class="dropdown-item d-flex align-items-center" href="logout.php">
+                    <i class="bi bi-box-arrow-right"></i>
+                    <span>Sign Out</span>
                 </a>
                 </li>
                 <li>
