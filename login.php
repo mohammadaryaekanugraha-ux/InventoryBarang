@@ -543,7 +543,7 @@ if (isset($_POST['login'])) {
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Login</h1>
+      <h1>Inventory_Barang_25550021</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Home</a></li>

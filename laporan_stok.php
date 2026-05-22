@@ -132,7 +132,7 @@ $html = '
                 <th>Tanggal Dibuat</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody>                   
 ';
 
 $no = 1;
@@ -152,7 +152,10 @@ foreach ($data as $row) {
     $gambar = 'produk_img/' . $row['gambar'];
 
     // Jika gambar kosong
-    if (empty($row['gambar']) || !file_exists($gambar)) {
+    $folderUpload = "Produk_img/";
+    $namaFileGambar = $row['gambar'];
+    $gambar = $folderUpload . $namaFileGambar;
+    if (empty($namaFileGambar) || !file_exists($gambar)) {
         $gambarHtml = '-';
     } else {
         $gambarHtml = '<img src="' . $gambar . '">';
@@ -162,7 +165,7 @@ foreach ($data as $row) {
         <tr>
             <td class="text-center">' . $no++ . '</td>
             <td class="text-center">' . $gambarHtml . '</td>
-            <td>' . $row['product_code'] . '</td>
+            <td>' . $row['PRODUCT_CODE'] . '</td>
             <td>' . $row['product_name'] . '</td>
             <td>' . $row['category_name'] . '</td>
             <td class="text-right">' . $harga . '</td>

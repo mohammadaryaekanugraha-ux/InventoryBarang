@@ -16,7 +16,7 @@ if (!isset($_SESSION["login"])) {
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Kategori Produk - Nama Sistem</title>
+    <title>Kategori Produk - Inventory_Barang_25550021</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -180,7 +180,7 @@ if (!isset($_SESSION["login"])) {
                             <h5 class="card-title">Vertical Form</h5>
 
                             <!-- Vertical Form -->
-                            <form class="row g-3">
+                            <form class="row g-3" action="kategori_produk.php" method="POST">
                                 <div class="col-12">
                                     <label for="inputNanme4" class="form-label">Your Name</label>
                                     <input type="text" class="form-control" id="inputNanme4">
