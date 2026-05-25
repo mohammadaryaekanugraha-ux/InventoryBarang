@@ -49,8 +49,8 @@ if (!isset($_SESSION["login"])) {
 
         <div class="d-flex align-items-center justify-content-between">
             <a href="index.php" class="logo d-flex align-items-center">
-                <img src="assets/img/logo.png" alt="">
-                <span class="d-none d-lg-block">Nama Sistem</span>
+                <img src="assets/img/logo Inventory_Barang.png" alt="Logo" style="max-height: 50px;">
+                <span class="d-none d-lg-block fs-5 ms-2" style="font-size: 24px; padding-left: 8px; white-space: nowrap;">Inventory_Barang_25550021</span>
             </a>
             <i class="bi bi-list toggle-sidebar-btn"></i>
         </div><!-- End Logo -->
@@ -59,7 +59,7 @@ if (!isset($_SESSION["login"])) {
             <ul class="d-flex align-items-center">
 
                     <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-                        <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+                        <img src="assets/img/Profile-Arya.jpg" alt="Profile" class="rounded-circle">
                     </a><!-- End Profile Iamge Icon -->
 
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">

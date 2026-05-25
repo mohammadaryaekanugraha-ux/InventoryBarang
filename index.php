@@ -143,8 +143,8 @@ function waktu_lalu($datetime)
 
     <div class="d-flex align-items-center justify-content-between">
       <a href="index.php" class="logo d-flex align-items-center me-auto me-lg-0" style="max-width: none; width: auto;">
-        <img src="assets/img/logo.png" alt="">
-        <span class="d-none d-lg-block" style="font-size: 24px; padding-left: 8px;">Inventory_Barang_25550021</span>
+        <img src="assets/img/logo Inventory_Barang.png" alt="Logo" style="max-height: 50px;">
+        <span class="d-none d-lg-block fs-5 ms-2" style="font-size: 24px; padding-left: 8px; white-space: nowrap;">Inventory_Barang_25550021</span>
       </a>
       <i class="bi bi-list toggle-sidebar-btn" style="margin-left: 20px;"></i>
         </div><!-- End Logo -->
@@ -155,7 +155,7 @@ function waktu_lalu($datetime)
         <li class="nav-item dropdown pe-3">
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-            <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+            <img src="assets/img/Profile-Arya.jpg" alt="Profile" class="rounded-circle" >
           </a><!-- End Profile Iamge Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
@@ -213,35 +213,35 @@ function waktu_lalu($datetime)
 
       <li class="nav-item">
         <a class="nav-link " href="index.php">
-         	<i class="bi bi-grid"></i>
+         	<i class="bi bi-speedometer2"></i>
           <span>Dashboard</span>
         </a>
       </li><!-- End Dashboard Nav -->
 
        <li class="nav-item">
         <a class="nav-link " href="kategori_produk.php">
-          <i class="bi bi-tags"></i>
+          <i class="bi bi-diagram-3"></i>
           <span>Kategori Produk</span>
         </a>
       </li><!-- End Dashboard Nav -->
 
         <li class="nav-item">
         <a class="nav-link " href="produk.php">
-          <i class="bi bi-box"></i>
+          <i class="bi bi-boxes"></i>
           <span>Data Produk</span>
         </a>
       </li><!-- End Dashboard Nav -->
 
         <li class="nav-item">
         <a class="nav-link " href="laporan.php">
-          <i class="bi bi-file-text"></i>
+          <i class="bi bi-graph-up-arrow"></i>
           <span>Laporan</span>
         </a>
       </li><!-- End Dashboard Nav -->
 
         <li class="nav-item">
         <a class="nav-link " href="users.php">
-          <i class="bi bi-people"></i>
+          <i class="bi bi-person-gear"></i>
           <span>Manajemen User</span>
         </a>
       </li><!-- End Dashboard Nav -->
