@@ -24,8 +24,8 @@ $kd_produk = $huruf . sprintf("%03s", $urutan);
 
 if (isset($_POST['simpan'])) {
     $nm_produk  = $_POST['nm_produk'];
-    $stok       = $_POST['stok'];
-    $min_stok   = $_POST['min_stok'];
+    $stock       = $_POST['stock'];
+    $min_stock   = $_POST['min_stock'];
     $harga      = $_POST['harga'];
     $id_kategori = $_POST['id_kategori'];
 
@@ -47,7 +47,7 @@ if (isset($_POST['simpan'])) {
         $query = mysqli_query($conn, "INSERT INTO products
         (category_id, product_code, product_name, stock, min_stock, price, gambar)
         VALUES
-        ('$id_kategori', '$kd_produk', '$nm_produk', '$stok', '$min_stok', '$harga', '$imgnewfile')");
+        ('$id_kategori', '$kd_produk', '$nm_produk', '$stock', '$min_stock', '$harga', '$imgnewfile')");
 
         if ($query) {
             echo "<script>alert('Produk berhasil ditambahkan!');</script>";
@@ -234,12 +234,12 @@ if (isset($_POST['simpan'])) {
                                     <input type="text" class="form-control" id="nm_produk" name="nm_produk" required>
                                 </div>
                                 <div class="col-12">
-                                    <label for="stok" class="form-label">stok</label>
-                                    <input type="number" class="form-control" id="stok" name="stok" required>
+                                    <label for="stock" class="form-label">Stok</label>
+                                    <input type="number" class="form-control" id="stock" name="stock" required>
                                 </div>
                                 <div class="col-12">
-                                    <label for="min_stok" class="form-label">minimal_stok</label>
-                                    <input type="number" class="form-control" id="min_stok" name="min_stok" required>
+                                    <label for="min_stock" class="form-label">minimal_Stok</label>
+                                    <input type="number" class="form-control" id="min_stock" name="min_stock" required>
                                 </div>
                                 <div class="col-12">
                                     <label for="harga" class="form-label">Harga</label>
