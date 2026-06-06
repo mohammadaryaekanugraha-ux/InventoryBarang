@@ -180,9 +180,9 @@ if (isset($_POST['simpan'])) {
             </li><!-- End Profile Page Nav -->
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="produk.php">
+                <a class="nav-link" href="produk.php" style="background: #f6f9ff; color: #4154f1;">
                     <i class="bi bi-boxes"></i>
-                    <span>Data_Produk</span>
+                    <span>Data Produk</span>
                 </a>
             </li><!-- End F.A.Q Page Nav -->
 

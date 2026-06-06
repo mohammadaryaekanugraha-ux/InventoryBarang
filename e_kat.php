@@ -139,7 +139,7 @@ if (isset($_POST['update'])) {
             </li><!-- End Dashboard Nav -->
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="kategori_produk.php">
+                <a class="nav-link collapsed" href="kategori_produk.php" style="background: #f6f9ff; color: #4154f1;">
                     <i class="bi bi-diagram-3"></i>
                     <span>Kategori Produk</span>
                 </a>
@@ -148,7 +148,7 @@ if (isset($_POST['update'])) {
             <li class="nav-item">
                 <a class="nav-link collapsed" href="produk.php">
                     <i class="bi bi-boxes"></i>
-                    <span>Data_Produk</span>
+                    <span>Data Produk</span>
                 </a>
             </li><!-- End F.A.Q Page Nav -->
 
@@ -187,7 +187,7 @@ if (isset($_POST['update'])) {
 
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Kategori produk</h5>
+                            <h5 class="card-title">Edit Kategori Produk</h5>
 
                             <!-- Vertical Form -->
                             <form class="row g-3" method ="post">

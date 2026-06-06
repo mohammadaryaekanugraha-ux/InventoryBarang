@@ -155,18 +155,20 @@ if (isset($_POST['submit'])) {
   </header><!-- End Header -->
   <!-- ======= Sidebar ======= -->
   <aside id="sidebar" class="sidebar">
-
+    <?php
+      $current_page = basename($_SERVER['PHP_SELF']);
+    ?>
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link " href="index.php">
+        <a class="nav-link <?php echo ($current_page == 'index.php') ? '' : 'collapsed'; ?>" href="index.php">
          	<i class="bi bi-speedometer2"></i>
           <span>Dashboard</span>
         </a>
       </li><!-- End Dashboard Nav -->
 
        <li class="nav-item">
-        <a class="nav-link " href="kategori_produk.php">
+        <a class="nav-link <?php echo ($current_page == 'kategori_produk.php') ? '' : 'collapsed'; ?>" href="kategori_produk.php">
           <i class="bi bi-diagram-3"></i>
           <span>Kategori Produk</span>
         </a>
@@ -174,22 +176,22 @@ if (isset($_POST['submit'])) {
 
 
         <li class="nav-item">
-        <a class="nav-link " href="produk.php">
-          <i class="bi bi-boxes"></i>
-          <span>Data Produk</span>
+        <a class="nav-link" href="produk.php" style="background: #f6f9ff; color: #4154f1;">
+          <i class="bi bi-boxes" style="color: #4154f1;"></i>
+          <span style="color: #4154f1; font-weight: 600;">Data Produk</span>
         </a>
       </li><!-- End Dashboard Nav -->
 
 
         <li class="nav-item">
-        <a class="nav-link " href="laporan.php">
+        <a class="nav-link <?php echo ($current_page == 'laporan.php') ? '' : 'collapsed'; ?>" href="laporan.php">
           <i class="bi bi-graph-up-arrow"></i>
           <span>Laporan</span>
         </a>
       </li><!-- End Dashboard Nav -->
 
         <li class="nav-item">
-        <a class="nav-link " href="users.php">
+        <a class="nav-link <?php echo ($current_page == 'users.php') ? '' : 'collapsed'; ?>" href="users.php">
           <i class="bi bi-person-gear"></i>
           <span>Manajemen User</span>
         </a>

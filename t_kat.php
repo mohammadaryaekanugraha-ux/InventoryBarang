@@ -152,7 +152,7 @@ if (isset($_POST['simpan'])) {
       </li><!-- End Dashboard Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="kategori_produk.php">
+        <a class="nav-link collapsed" href="kategori_produk.php" style="background: #f6f9ff; color: #4154f1;">
           <i class="bi bi-diagram-3"></i>
           <span>Kategori Produk</span>
         </a>
